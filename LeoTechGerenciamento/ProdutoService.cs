@@ -10,8 +10,8 @@ namespace LeoTechAssistenciaTecnica
     public class Produto
     {
         public int Id { get; set; }
-        public string NomeDoProduto { get; set; }
-        public string Descricao { get; set; }
+        public string? NomeDoProduto { get; set; }
+        public string? Descricao { get; set; }
         public int Quantidade { get; set; }
 
         public override string ToString()

@@ -53,7 +53,6 @@ namespace LeoTechGerenciamento
         {
             if (!CamposPreenchidosEstoque())
             {
-                MessageBox.Show("Preencha todos os campos obrigatórios!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -78,7 +77,6 @@ namespace LeoTechGerenciamento
                 LimparCamposEstoque();
             }
         }
-
         // Btn Excluir Estoque
         private void btnExcluirEstoque_Click(object sender, EventArgs e)
         {
@@ -101,7 +99,6 @@ namespace LeoTechGerenciamento
         {
             if (!CamposPreenchidosEstoque())
             {
-                MessageBox.Show("Preencha todos os campos obrigatórios!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -127,7 +124,8 @@ namespace LeoTechGerenciamento
             }
         }
 
-        // Metodo Atualizar List
+        //-----------------------------------------------------------------------------------------------
+        // Metodo Atualizar List Cliente
         private void AtualizarListBoxClientes()
         {
             lstBoxCliente.DataSource = null;
@@ -138,7 +136,6 @@ namespace LeoTechGerenciamento
         {
             if (!CamposPreenchidosCliente())
             {
-                MessageBox.Show("Preencha todos os campos obrigatórios!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -164,13 +161,11 @@ namespace LeoTechGerenciamento
                 LimparCamposClientes();
             }
         }
-
         // Btn Atualizar Cliente
         private void btnAtualizarCliente_Click(object sender, EventArgs e)
         {
             if (!CamposPreenchidosCliente())
             {
-                MessageBox.Show("Preencha todos os campos obrigatórios!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -196,7 +191,6 @@ namespace LeoTechGerenciamento
                 MessageBox.Show("Cliente não encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         // Btn Excluir Cliente
         private void btnExcluirCliente_Click(object sender, EventArgs e)
         {
@@ -224,6 +218,8 @@ namespace LeoTechGerenciamento
             txtEmailCliente.Clear();
             txtCpfCliente.Clear();
         }
+
+        // -----------------------------------------------------------------------------------------
         // Metodo Atualizar Entrada
         private void AtualizarListBoxServicos()
         {
@@ -235,7 +231,6 @@ namespace LeoTechGerenciamento
         {
             if (!CamposPreenchidosServico())
             {
-                MessageBox.Show("Preencha todos os campos obrigatórios!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -244,16 +239,10 @@ namespace LeoTechGerenciamento
                 Id = (int)numIdEntrada.Value,
                 NomeCliente = txtNomeEntrada.Text,
                 TipoServico = txtTipoEntrada.Text,
-                DataEntrada = dateEntrada.Value,
-                DataSaida = dateSaidaEntrada.Value,
+                DataEntrada = txtDataEntradaEntrada.Text,
+                DataSaida = txtDataSaidaEntrada.Text,
                 Obs = txtObsEntrada.Text
             };
-
-            if (servico.DataEntrada > servico.DataSaida)
-            {
-                MessageBox.Show("A Data de Entrada não pode ser maior que a Data de Saída.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
 
             if (servicoService.AdicionarServico(servico))
             {
@@ -267,13 +256,11 @@ namespace LeoTechGerenciamento
                 MessageBox.Show("Já existe um serviço com este ID.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         // Btn Atualizar Entrada
         private void btnAtualizarServico_Click(object sender, EventArgs e)
         {
             if (!CamposPreenchidosServico())
             {
-                MessageBox.Show("Preencha todos os campos obrigatórios!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -283,16 +270,10 @@ namespace LeoTechGerenciamento
             {
                 NomeCliente = txtNomeEntrada.Text,
                 TipoServico = txtTipoEntrada.Text,
-                DataEntrada = dateEntrada.Value,
-                DataSaida = dateSaidaEntrada.Value,
+                DataEntrada = txtDataEntradaEntrada.Text,
+                DataSaida = txtDataSaidaEntrada.Text,
                 Obs = txtObsEntrada.Text
             };
-
-            if (servicoAtualizado.DataEntrada > servicoAtualizado.DataSaida)
-            {
-                MessageBox.Show("A Data de Entrada não pode ser maior que a Data de Saída.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
 
             if (servicoService.AtualizarServico(id, servicoAtualizado))
             {
@@ -306,7 +287,6 @@ namespace LeoTechGerenciamento
                 MessageBox.Show("Serviço não encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         // Btn Excluir Entrada
         private void btnExcluirServico_Click(object sender, EventArgs e)
         {
@@ -330,11 +310,12 @@ namespace LeoTechGerenciamento
             numIdEntrada.Value = 0;
             txtNomeEntrada.Clear();
             txtTipoEntrada.Clear();
-            dateEntrada.Value = DateTime.Now;
-            dateSaidaEntrada.Value = DateTime.Now;
+            txtDataEntradaEntrada.Clear();
+            txtDataSaidaEntrada.Clear();
             txtObsEntrada.Clear();
         }
 
+        // ---------------------------------------------------------------------------------
         private void AtualizarListBoxSaidas()
         {
             lstBoxSaida.DataSource = null;
@@ -344,7 +325,6 @@ namespace LeoTechGerenciamento
         {
             if (!CamposPreenchidosSaida())
             {
-                MessageBox.Show("Preencha todos os campos obrigatórios!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -353,7 +333,8 @@ namespace LeoTechGerenciamento
                 Id = (int)numIdSaida.Value,
                 NomeCliente = txtNomeSaida.Text,
                 TipoServico = txtTipoSaida.Text,
-                DataSaida = dateSaidaSaida.Value,
+                DataEntrada = txtDataEntradaSaida.Text,
+                DataSaida = txtDataSaidaSaida.Text,
                 Obs = txtObsSaida.Text
             };
 
@@ -374,7 +355,6 @@ namespace LeoTechGerenciamento
         {
             if (!CamposPreenchidosSaida())
             {
-                MessageBox.Show("Preencha todos os campos obrigatórios!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -384,7 +364,8 @@ namespace LeoTechGerenciamento
             {
                 NomeCliente = txtNomeSaida.Text,
                 TipoServico = txtTipoSaida.Text,
-                DataSaida = dateSaidaSaida.Value,
+                DataEntrada = txtDataEntradaSaida.Text,
+                DataSaida = txtDataSaidaSaida.Text,
                 Obs = txtObsSaida.Text
             };
 
@@ -417,17 +398,17 @@ namespace LeoTechGerenciamento
                 MessageBox.Show("Saída não encontrada.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         private void LimparCamposSaidas()
         {
             numIdSaida.Value = 0;
             txtNomeSaida.Clear();
             txtTipoSaida.Clear();
             txtObsSaida.Clear();
-            dateEntradaSaida.Value = DateTime.Now;
-            dateSaidaSaida.Value = DateTime.Now;
+            txtDataEntradaSaida.Clear();
+            txtDataSaidaSaida.Clear();
         }
 
+        // -----------------------------------------------------------------------------------------
         private void AtualizarHistorico()
         {
             int totalEstoque = produtoService.ObterTodos().Count;
@@ -443,40 +424,110 @@ namespace LeoTechGerenciamento
                 $"- Serviços de Saída: {totalSaidas}";
         }
 
+        // --------------------------------------------------------------------------------------
         private bool CamposPreenchidosEstoque()
         {
-            return !string.IsNullOrWhiteSpace(txtNomeEstoque.Text) &&
-                   !string.IsNullOrWhiteSpace(txtDescEstoque.Text) &&
-                   numIdEstoque.Value > 0 &&
-                   numQuantEstoque.Value > 0;
+            if (string.IsNullOrWhiteSpace(txtNomeEstoque.Text))
+            {
+                MessageBox.Show("O campo 'Nome do Produto' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(txtDescEstoque.Text))
+            {
+                MessageBox.Show("O campo 'Descrição' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (numIdEstoque.Value == 0)
+            {
+                MessageBox.Show("O campo 'ID' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (numQuantEstoque.Value == 0)
+            {
+                MessageBox.Show("O campo 'Quantidade' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+           return true;
         }
 
         private bool CamposPreenchidosCliente()
         {
-            return !string.IsNullOrWhiteSpace(txtNomeCliente.Text) &&
-                   !string.IsNullOrWhiteSpace(txtTelefoneCliente.Text) &&
-                   !string.IsNullOrWhiteSpace(txtEmailCliente.Text) &&
-                   !string.IsNullOrWhiteSpace(txtCpfCliente.Text) &&
-                   numIdCliente.Value > 0;
+            if (string.IsNullOrWhiteSpace(txtNomeCliente.Text))
+            {
+                MessageBox.Show("O campo 'Nome do Cliente' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(txtTelefoneCliente.Text))
+            {
+                MessageBox.Show("O campo 'Telefone' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (numIdCliente.Value == 0)
+            {
+                MessageBox.Show("O campo 'ID' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
         }
 
         private bool CamposPreenchidosServico()
         {
-            return !string.IsNullOrWhiteSpace(txtNomeEntrada.Text) &&
-                   !string.IsNullOrWhiteSpace(txtTipoEntrada.Text) &&
-                   dateEntrada.Value != null &&
-                   dateSaidaEntrada.Value != null &&
-                   !string.IsNullOrWhiteSpace(txtObsEntrada.Text) &&
-                   numIdEntrada.Value > 0;
+            if (string.IsNullOrWhiteSpace(txtNomeEntrada.Text))
+            {
+                MessageBox.Show("O campo 'Nome do Cliente' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(txtTipoEntrada.Text))
+            {
+                MessageBox.Show("O campo 'Tipo de Serviço' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(txtDataEntradaEntrada.Text))
+            {
+                MessageBox.Show("O campo 'Data de Entrada' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(txtDataSaidaEntrada.Text))
+            {
+                MessageBox.Show("O campo 'Data de Saída' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (numIdEntrada.Value == 0)
+            {
+                MessageBox.Show("O campo 'ID' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
         }
 
         private bool CamposPreenchidosSaida()
         {
-            return !string.IsNullOrWhiteSpace(txtNomeSaida.Text) &&
-                   !string.IsNullOrWhiteSpace(txtTipoSaida.Text) &&
-                   dateSaidaSaida.Value != null &&
-                   !string.IsNullOrWhiteSpace(txtObsSaida.Text) &&
-                   numIdSaida.Value > 0;
+            if (string.IsNullOrWhiteSpace(txtNomeSaida.Text))
+            {
+                MessageBox.Show("O campo 'Nome do Cliente' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(txtTipoSaida.Text))
+            {
+                MessageBox.Show("O campo 'Tipo de Serviço' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(txtDataEntradaSaida.Text))
+            {
+                MessageBox.Show("O campo 'Data de Entrada' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(txtDataSaidaSaida.Text))
+            {
+                MessageBox.Show("O campo 'Data de Saída' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (numIdSaida.Value == 0)
+            {
+                MessageBox.Show("O campo 'ID' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
         }
     }
 }

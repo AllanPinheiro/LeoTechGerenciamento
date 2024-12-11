@@ -9,14 +9,15 @@ namespace LeoTechAssistenciaTecnica
     public class SaidaServico
     {
         public int Id { get; set; }
-        public string NomeCliente { get; set; }
-        public string TipoServico { get; set; }
-        public DateTime DataSaida { get; set; }
-        public string Obs { get; set; } // Campo adicional para observações
+        public string? NomeCliente { get; set; }
+        public string? TipoServico { get; set; }
+        public  string? DataEntrada { get; set; }
+        public string? DataSaida { get; set; }
+        public string? Obs { get; set; } // Campo adicional para observações
 
         public override string ToString()
         {
-            return $"ID: {Id} --- Nome Do Cliente: {NomeCliente.ToUpper()} --- Tipo De Serviço: {TipoServico.ToUpper()} --- Data Entrada: {DataSaida} --- Data Saida: {DataSaida} --- Obs: {Obs}";
+            return $"ID: {Id} --- Nome Do Cliente: {NomeCliente.ToUpper()} --- Tipo De Serviço: {TipoServico.ToUpper()} --- Data Entrada: {DataEntrada} --- Data Saida: {DataSaida} --- Obs: {Obs}";
         }
     }
 
@@ -84,6 +85,7 @@ namespace LeoTechAssistenciaTecnica
             saidaExistente.NomeCliente = saidaAtualizada.NomeCliente;
             saidaExistente.TipoServico = saidaAtualizada.TipoServico;
             saidaExistente.DataSaida = saidaAtualizada.DataSaida;
+            saidaExistente.DataEntrada = saidaAtualizada.DataEntrada;
             saidaExistente.Obs = saidaAtualizada.Obs;
 
             SalvarSaidas();

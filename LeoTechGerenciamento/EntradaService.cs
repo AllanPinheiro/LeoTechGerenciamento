@@ -9,11 +9,11 @@ namespace LeoTechAssistenciaTecnica
     public class Servico
     {
         public int Id { get; set; }
-        public string NomeCliente { get; set; }
-        public string TipoServico { get; set; }
-        public DateTime DataEntrada { get; set; }
-        public DateTime DataSaida { get; set; }
-        public string Obs {  get; set; }
+        public string? NomeCliente { get; set; }
+        public string? TipoServico { get; set; }
+        public string? DataEntrada { get; set; }
+        public string? DataSaida { get; set; }
+        public string? Obs {  get; set; }
 
         public override string ToString()
         {

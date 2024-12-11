@@ -61,13 +61,13 @@
             label4 = new Label();
             label3 = new Label();
             tabPage3 = new TabPage();
+            txtDataSaidaEntrada = new TextBox();
+            txtDataEntradaEntrada = new TextBox();
             lstBoxEntrada = new ListBox();
             txtObsEntrada = new TextBox();
             label19 = new Label();
-            dateSaidaEntrada = new DateTimePicker();
             label16 = new Label();
             label14 = new Label();
-            dateEntrada = new DateTimePicker();
             label13 = new Label();
             numIdEntrada = new NumericUpDown();
             btnAdicionarentrada = new Button();
@@ -79,13 +79,13 @@
             txtNomeEntrada = new TextBox();
             label18 = new Label();
             tabPage4 = new TabPage();
+            txtDataSaidaSaida = new TextBox();
+            txtDataEntradaSaida = new TextBox();
             lstBoxSaida = new ListBox();
             txtObsSaida = new TextBox();
             label20 = new Label();
-            dateSaidaSaida = new DateTimePicker();
             label21 = new Label();
             label22 = new Label();
-            dateEntradaSaida = new DateTimePicker();
             label23 = new Label();
             numIdSaida = new NumericUpDown();
             btnAdicinarSaida = new Button();
@@ -450,13 +450,13 @@
             // tabPage3
             // 
             tabPage3.BackColor = SystemColors.Control;
+            tabPage3.Controls.Add(txtDataSaidaEntrada);
+            tabPage3.Controls.Add(txtDataEntradaEntrada);
             tabPage3.Controls.Add(lstBoxEntrada);
             tabPage3.Controls.Add(txtObsEntrada);
             tabPage3.Controls.Add(label19);
-            tabPage3.Controls.Add(dateSaidaEntrada);
             tabPage3.Controls.Add(label16);
             tabPage3.Controls.Add(label14);
-            tabPage3.Controls.Add(dateEntrada);
             tabPage3.Controls.Add(label13);
             tabPage3.Controls.Add(numIdEntrada);
             tabPage3.Controls.Add(btnAdicionarentrada);
@@ -473,6 +473,20 @@
             tabPage3.Size = new Size(907, 413);
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Entrada";
+            // 
+            // txtDataSaidaEntrada
+            // 
+            txtDataSaidaEntrada.Location = new Point(353, 334);
+            txtDataSaidaEntrada.Name = "txtDataSaidaEntrada";
+            txtDataSaidaEntrada.Size = new Size(96, 23);
+            txtDataSaidaEntrada.TabIndex = 63;
+            // 
+            // txtDataEntradaEntrada
+            // 
+            txtDataEntradaEntrada.Location = new Point(133, 336);
+            txtDataEntradaEntrada.Name = "txtDataEntradaEntrada";
+            txtDataEntradaEntrada.Size = new Size(102, 23);
+            txtDataEntradaEntrada.TabIndex = 62;
             // 
             // lstBoxEntrada
             // 
@@ -503,15 +517,6 @@
             label19.TabIndex = 40;
             label19.Text = "Obs:";
             // 
-            // dateSaidaEntrada
-            // 
-            dateSaidaEntrada.Format = DateTimePickerFormat.Short;
-            dateSaidaEntrada.Location = new Point(353, 334);
-            dateSaidaEntrada.Name = "dateSaidaEntrada";
-            dateSaidaEntrada.Size = new Size(96, 23);
-            dateSaidaEntrada.TabIndex = 39;
-            dateSaidaEntrada.Value = new DateTime(2024, 12, 10, 12, 36, 42, 0);
-            // 
             // label16
             // 
             label16.AutoSize = true;
@@ -531,15 +536,6 @@
             label14.Size = new Size(127, 25);
             label14.TabIndex = 37;
             label14.Text = "Data Entrada";
-            // 
-            // dateEntrada
-            // 
-            dateEntrada.Format = DateTimePickerFormat.Short;
-            dateEntrada.Location = new Point(133, 336);
-            dateEntrada.Name = "dateEntrada";
-            dateEntrada.Size = new Size(102, 23);
-            dateEntrada.TabIndex = 36;
-            dateEntrada.Value = new DateTime(2024, 12, 10, 12, 36, 30, 0);
             // 
             // label13
             // 
@@ -637,13 +633,13 @@
             // 
             // tabPage4
             // 
+            tabPage4.Controls.Add(txtDataSaidaSaida);
+            tabPage4.Controls.Add(txtDataEntradaSaida);
             tabPage4.Controls.Add(lstBoxSaida);
             tabPage4.Controls.Add(txtObsSaida);
             tabPage4.Controls.Add(label20);
-            tabPage4.Controls.Add(dateSaidaSaida);
             tabPage4.Controls.Add(label21);
             tabPage4.Controls.Add(label22);
-            tabPage4.Controls.Add(dateEntradaSaida);
             tabPage4.Controls.Add(label23);
             tabPage4.Controls.Add(numIdSaida);
             tabPage4.Controls.Add(btnAdicinarSaida);
@@ -661,6 +657,20 @@
             tabPage4.TabIndex = 3;
             tabPage4.Text = "Saida";
             tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // txtDataSaidaSaida
+            // 
+            txtDataSaidaSaida.Location = new Point(353, 334);
+            txtDataSaidaSaida.Name = "txtDataSaidaSaida";
+            txtDataSaidaSaida.Size = new Size(96, 23);
+            txtDataSaidaSaida.TabIndex = 62;
+            // 
+            // txtDataEntradaSaida
+            // 
+            txtDataEntradaSaida.Location = new Point(133, 336);
+            txtDataEntradaSaida.Name = "txtDataEntradaSaida";
+            txtDataEntradaSaida.Size = new Size(102, 23);
+            txtDataEntradaSaida.TabIndex = 61;
             // 
             // lstBoxSaida
             // 
@@ -691,15 +701,6 @@
             label20.TabIndex = 58;
             label20.Text = "Obs:";
             // 
-            // dateSaidaSaida
-            // 
-            dateSaidaSaida.Format = DateTimePickerFormat.Short;
-            dateSaidaSaida.Location = new Point(353, 334);
-            dateSaidaSaida.Name = "dateSaidaSaida";
-            dateSaidaSaida.Size = new Size(96, 23);
-            dateSaidaSaida.TabIndex = 57;
-            dateSaidaSaida.Value = new DateTime(2024, 12, 10, 12, 36, 55, 0);
-            // 
             // label21
             // 
             label21.AutoSize = true;
@@ -719,15 +720,6 @@
             label22.Size = new Size(127, 25);
             label22.TabIndex = 55;
             label22.Text = "Data Entrada";
-            // 
-            // dateEntradaSaida
-            // 
-            dateEntradaSaida.Format = DateTimePickerFormat.Short;
-            dateEntradaSaida.Location = new Point(133, 336);
-            dateEntradaSaida.Name = "dateEntradaSaida";
-            dateEntradaSaida.Size = new Size(102, 23);
-            dateEntradaSaida.TabIndex = 54;
-            dateEntradaSaida.Value = new DateTime(2024, 12, 10, 12, 37, 0, 0);
             // 
             // label23
             // 
@@ -996,17 +988,13 @@
         private TextBox txtNomeEntrada;
         private Label label18;
         private Label label14;
-        private DateTimePicker dateEntrada;
         private Label label16;
-        private DateTimePicker dateSaidaEntrada;
         private TextBox txtObsEntrada;
         private Label label19;
         private TextBox txtObsSaida;
         private Label label20;
-        private DateTimePicker dateSaidaSaida;
         private Label label21;
         private Label label22;
-        private DateTimePicker dateEntradaSaida;
         private Label label23;
         private NumericUpDown numIdSaida;
         private Button btnAdicinarSaida;
@@ -1031,5 +1019,9 @@
         private Label label37;
         private Label label32;
         private Label lblStatusHistorico;
+        private TextBox txtDataSaidaSaida;
+        private TextBox txtDataEntradaSaida;
+        private TextBox txtDataSaidaEntrada;
+        private TextBox txtDataEntradaEntrada;
     }
 }
