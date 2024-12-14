@@ -16,7 +16,7 @@ namespace LeoTechAssistenciaTecnica
 
         public override string ToString()
         {
-            return $"ID: {Id} --- Nome Do Cliente: {Nome.ToUpper()} --- Telefone: {Telefone} --- Email: {Email.ToUpper()} --- CPF: {Cpf}";
+            return $"ID:  {Id} --- Nome Do Cliente:  {Nome.ToUpper()} --- Telefone:  {Telefone} --- Email:  {Email.ToUpper()} --- CPF:  {Cpf}";
         }
     }
 
