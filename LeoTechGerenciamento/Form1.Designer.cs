@@ -173,12 +173,14 @@
             // 
             // btnCadastrarEstoque
             // 
+            btnCadastrarEstoque.BackgroundImage = (Image)resources.GetObject("btnCadastrarEstoque.BackgroundImage");
+            btnCadastrarEstoque.BackgroundImageLayout = ImageLayout.Zoom;
+            btnCadastrarEstoque.Cursor = Cursors.Hand;
             btnCadastrarEstoque.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCadastrarEstoque.Location = new Point(571, 363);
             btnCadastrarEstoque.Name = "btnCadastrarEstoque";
             btnCadastrarEstoque.Size = new Size(336, 44);
             btnCadastrarEstoque.TabIndex = 20;
-            btnCadastrarEstoque.Text = "Cadastrar Produto";
             btnCadastrarEstoque.UseVisualStyleBackColor = true;
             btnCadastrarEstoque.Click += btnCadastrarEstoque_Click;
             // 
@@ -228,12 +230,14 @@
             // 
             // btnExcluirEstoque
             // 
+            btnExcluirEstoque.BackgroundImage = (Image)resources.GetObject("btnExcluirEstoque.BackgroundImage");
+            btnExcluirEstoque.BackgroundImageLayout = ImageLayout.Zoom;
+            btnExcluirEstoque.Cursor = Cursors.Hand;
             btnExcluirEstoque.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnExcluirEstoque.Location = new Point(342, 363);
             btnExcluirEstoque.Name = "btnExcluirEstoque";
             btnExcluirEstoque.Size = new Size(223, 44);
             btnExcluirEstoque.TabIndex = 7;
-            btnExcluirEstoque.Text = "Excluir Produto";
             btnExcluirEstoque.UseVisualStyleBackColor = true;
             btnExcluirEstoque.Click += btnExcluirEstoque_Click;
             // 
@@ -273,12 +277,14 @@
             // 
             // btnAtulizarEstoque
             // 
+            btnAtulizarEstoque.BackgroundImage = (Image)resources.GetObject("btnAtulizarEstoque.BackgroundImage");
+            btnAtulizarEstoque.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAtulizarEstoque.Cursor = Cursors.Hand;
             btnAtulizarEstoque.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAtulizarEstoque.Location = new Point(0, 363);
             btnAtulizarEstoque.Name = "btnAtulizarEstoque";
             btnAtulizarEstoque.Size = new Size(336, 44);
             btnAtulizarEstoque.TabIndex = 6;
-            btnAtulizarEstoque.Text = "Atualizar Produto";
             btnAtulizarEstoque.UseVisualStyleBackColor = true;
             btnAtulizarEstoque.Click += btnAtualizarEstoque_Click;
             // 
@@ -362,34 +368,40 @@
             // 
             // btnAdicionarCliente
             // 
+            btnAdicionarCliente.BackgroundImage = (Image)resources.GetObject("btnAdicionarCliente.BackgroundImage");
+            btnAdicionarCliente.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAdicionarCliente.Cursor = Cursors.Hand;
             btnAdicionarCliente.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAdicionarCliente.Location = new Point(571, 363);
             btnAdicionarCliente.Name = "btnAdicionarCliente";
             btnAdicionarCliente.Size = new Size(336, 44);
             btnAdicionarCliente.TabIndex = 15;
-            btnAdicionarCliente.Text = "Adicionar Cliente";
             btnAdicionarCliente.UseVisualStyleBackColor = true;
             btnAdicionarCliente.Click += btnAdicionarCliente_Click;
             // 
             // btnExcluirCliente
             // 
+            btnExcluirCliente.BackgroundImage = (Image)resources.GetObject("btnExcluirCliente.BackgroundImage");
+            btnExcluirCliente.BackgroundImageLayout = ImageLayout.Zoom;
+            btnExcluirCliente.Cursor = Cursors.Hand;
             btnExcluirCliente.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnExcluirCliente.Location = new Point(342, 363);
             btnExcluirCliente.Name = "btnExcluirCliente";
             btnExcluirCliente.Size = new Size(223, 44);
             btnExcluirCliente.TabIndex = 13;
-            btnExcluirCliente.Text = "Excluir Cliente";
             btnExcluirCliente.UseVisualStyleBackColor = true;
             btnExcluirCliente.Click += btnExcluirCliente_Click;
             // 
             // btnAtualizarCliente
             // 
+            btnAtualizarCliente.BackgroundImage = (Image)resources.GetObject("btnAtualizarCliente.BackgroundImage");
+            btnAtualizarCliente.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAtualizarCliente.Cursor = Cursors.Hand;
             btnAtualizarCliente.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAtualizarCliente.Location = new Point(0, 363);
             btnAtualizarCliente.Name = "btnAtualizarCliente";
             btnAtualizarCliente.Size = new Size(336, 44);
             btnAtualizarCliente.TabIndex = 12;
-            btnAtualizarCliente.Text = "Atualizar Cliente";
             btnAtualizarCliente.UseVisualStyleBackColor = true;
             btnAtualizarCliente.Click += btnAtualizarCliente_Click;
             // 
@@ -556,34 +568,40 @@
             // 
             // btnAdicionarentrada
             // 
+            btnAdicionarentrada.BackgroundImage = (Image)resources.GetObject("btnAdicionarentrada.BackgroundImage");
+            btnAdicionarentrada.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAdicionarentrada.Cursor = Cursors.Hand;
             btnAdicionarentrada.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAdicionarentrada.Location = new Point(571, 363);
             btnAdicionarentrada.Name = "btnAdicionarentrada";
             btnAdicionarentrada.Size = new Size(336, 44);
             btnAdicionarentrada.TabIndex = 31;
-            btnAdicionarentrada.Text = "Adicionar Entrada";
             btnAdicionarentrada.UseVisualStyleBackColor = true;
             btnAdicionarentrada.Click += btnAdicionarServico_Click;
             // 
             // btnExcluirEntrada
             // 
+            btnExcluirEntrada.BackgroundImage = (Image)resources.GetObject("btnExcluirEntrada.BackgroundImage");
+            btnExcluirEntrada.BackgroundImageLayout = ImageLayout.Zoom;
+            btnExcluirEntrada.Cursor = Cursors.Hand;
             btnExcluirEntrada.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnExcluirEntrada.Location = new Point(342, 363);
             btnExcluirEntrada.Name = "btnExcluirEntrada";
             btnExcluirEntrada.Size = new Size(223, 44);
             btnExcluirEntrada.TabIndex = 29;
-            btnExcluirEntrada.Text = "Excluir Entrada";
             btnExcluirEntrada.UseVisualStyleBackColor = true;
             btnExcluirEntrada.Click += btnExcluirServico_Click;
             // 
             // btnAtualizarEntrada
             // 
+            btnAtualizarEntrada.BackgroundImage = (Image)resources.GetObject("btnAtualizarEntrada.BackgroundImage");
+            btnAtualizarEntrada.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAtualizarEntrada.Cursor = Cursors.Hand;
             btnAtualizarEntrada.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAtualizarEntrada.Location = new Point(0, 363);
             btnAtualizarEntrada.Name = "btnAtualizarEntrada";
             btnAtualizarEntrada.Size = new Size(336, 44);
             btnAtualizarEntrada.TabIndex = 28;
-            btnAtualizarEntrada.Text = "Atualizar Entrada";
             btnAtualizarEntrada.UseVisualStyleBackColor = true;
             btnAtualizarEntrada.Click += btnAtualizarServico_Click;
             // 
@@ -740,34 +758,40 @@
             // 
             // btnAdicinarSaida
             // 
+            btnAdicinarSaida.BackgroundImage = (Image)resources.GetObject("btnAdicinarSaida.BackgroundImage");
+            btnAdicinarSaida.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAdicinarSaida.Cursor = Cursors.Hand;
             btnAdicinarSaida.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAdicinarSaida.Location = new Point(571, 363);
             btnAdicinarSaida.Name = "btnAdicinarSaida";
             btnAdicinarSaida.Size = new Size(336, 44);
             btnAdicinarSaida.TabIndex = 51;
-            btnAdicinarSaida.Text = "Adicionar Saida";
             btnAdicinarSaida.UseVisualStyleBackColor = true;
             btnAdicinarSaida.Click += btnAdicionarSaida_Click;
             // 
             // btnExcluirSaida
             // 
+            btnExcluirSaida.BackgroundImage = (Image)resources.GetObject("btnExcluirSaida.BackgroundImage");
+            btnExcluirSaida.BackgroundImageLayout = ImageLayout.Zoom;
+            btnExcluirSaida.Cursor = Cursors.Hand;
             btnExcluirSaida.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnExcluirSaida.Location = new Point(342, 363);
             btnExcluirSaida.Name = "btnExcluirSaida";
             btnExcluirSaida.Size = new Size(223, 44);
             btnExcluirSaida.TabIndex = 49;
-            btnExcluirSaida.Text = "Excluir Saida";
             btnExcluirSaida.UseVisualStyleBackColor = true;
             btnExcluirSaida.Click += btnExcluirSaida_Click;
             // 
             // btnAtualizarSaida
             // 
+            btnAtualizarSaida.BackgroundImage = (Image)resources.GetObject("btnAtualizarSaida.BackgroundImage");
+            btnAtualizarSaida.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAtualizarSaida.Cursor = Cursors.Hand;
             btnAtualizarSaida.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAtualizarSaida.Location = new Point(0, 363);
             btnAtualizarSaida.Name = "btnAtualizarSaida";
             btnAtualizarSaida.Size = new Size(336, 44);
             btnAtualizarSaida.TabIndex = 48;
-            btnAtualizarSaida.Text = "Atualizar Saida";
             btnAtualizarSaida.UseVisualStyleBackColor = true;
             btnAtualizarSaida.Click += btnAtualizarSaida_Click;
             // 
@@ -867,23 +891,36 @@
             // 
             // btnFechar
             // 
+            btnFechar.BackColor = Color.Transparent;
+            btnFechar.BackgroundImage = (Image)resources.GetObject("btnFechar.BackgroundImage");
+            btnFechar.BackgroundImageLayout = ImageLayout.Zoom;
+            btnFechar.Cursor = Cursors.Hand;
+            btnFechar.FlatAppearance.BorderSize = 0;
+            btnFechar.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnFechar.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnFechar.FlatStyle = FlatStyle.Flat;
             btnFechar.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnFechar.Location = new Point(888, 32);
+            btnFechar.Location = new Point(902, 32);
             btnFechar.Name = "btnFechar";
-            btnFechar.Size = new Size(71, 51);
+            btnFechar.Size = new Size(53, 51);
             btnFechar.TabIndex = 3;
-            btnFechar.Text = "X";
-            btnFechar.UseVisualStyleBackColor = true;
+            btnFechar.UseVisualStyleBackColor = false;
             btnFechar.Click += btnFechar_Click;
             // 
             // btnMinimizar
             // 
+            btnMinimizar.BackgroundImage = (Image)resources.GetObject("btnMinimizar.BackgroundImage");
+            btnMinimizar.BackgroundImageLayout = ImageLayout.Zoom;
+            btnMinimizar.Cursor = Cursors.Hand;
+            btnMinimizar.FlatAppearance.BorderSize = 0;
+            btnMinimizar.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnMinimizar.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnMinimizar.FlatStyle = FlatStyle.Flat;
             btnMinimizar.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMinimizar.Location = new Point(811, 32);
+            btnMinimizar.Location = new Point(846, 32);
             btnMinimizar.Name = "btnMinimizar";
-            btnMinimizar.Size = new Size(71, 51);
+            btnMinimizar.Size = new Size(50, 51);
             btnMinimizar.TabIndex = 4;
-            btnMinimizar.Text = "–";
             btnMinimizar.UseVisualStyleBackColor = true;
             btnMinimizar.Click += btnMinimizar_Click;
             // 
