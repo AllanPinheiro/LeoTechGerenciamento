@@ -418,9 +418,9 @@ namespace LeoTechGerenciamento
 
             lblStatusHistorico.Text =
                 $"Resumo do Sistema:\n\n" +
-                $"- Produtos no Estoque: {totalEstoque}\n" +
-                $"- Clientes Cadastrados: {totalClientes}\n" +
-                $"- Serviços de Entrada: {totalEntradas}\n" +
+                $"- Produtos no Estoque: {totalEstoque}\n\n" +
+                $"- Clientes Cadastrados: {totalClientes}\n\n" +
+                $"- Serviços de Entrada: {totalEntradas}\n\n" +
                 $"- Serviços de Saída: {totalSaidas}";
         }
 

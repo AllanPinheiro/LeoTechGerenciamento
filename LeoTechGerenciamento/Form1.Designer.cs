@@ -36,6 +36,7 @@
             numIdEstoque = new NumericUpDown();
             numQuantEstoque = new NumericUpDown();
             label7 = new Label();
+            btnAtulizarEstoque = new Button();
             label8 = new Label();
             label2 = new Label();
             btnExcluirEstoque = new Button();
@@ -43,17 +44,16 @@
             label9 = new Label();
             txtNomeEstoque = new TextBox();
             label10 = new Label();
-            btnAtulizarEstoque = new Button();
             tabPage2 = new TabPage();
             txtCpfCliente = new TextBox();
             label11 = new Label();
             txtNomeCliente = new TextBox();
             numIdCliente = new NumericUpDown();
             lstBoxCliente = new ListBox();
+            btnAtualizarCliente = new Button();
             label12 = new Label();
             btnAdicionarCliente = new Button();
             btnExcluirCliente = new Button();
-            btnAtualizarCliente = new Button();
             label6 = new Label();
             txtEmailCliente = new TextBox();
             label5 = new Label();
@@ -66,13 +66,13 @@
             lstBoxEntrada = new ListBox();
             txtObsEntrada = new TextBox();
             label19 = new Label();
+            btnAtualizarEntrada = new Button();
             label16 = new Label();
             label14 = new Label();
             label13 = new Label();
             numIdEntrada = new NumericUpDown();
             btnAdicionarentrada = new Button();
             btnExcluirEntrada = new Button();
-            btnAtualizarEntrada = new Button();
             label15 = new Label();
             txtTipoEntrada = new TextBox();
             label17 = new Label();
@@ -84,11 +84,11 @@
             lstBoxSaida = new ListBox();
             txtObsSaida = new TextBox();
             label20 = new Label();
+            btnAdicinarSaida = new Button();
             label21 = new Label();
             label22 = new Label();
             label23 = new Label();
             numIdSaida = new NumericUpDown();
-            btnAdicinarSaida = new Button();
             btnExcluirSaida = new Button();
             btnAtualizarSaida = new Button();
             label24 = new Label();
@@ -97,14 +97,14 @@
             txtNomeSaida = new TextBox();
             label26 = new Label();
             tabPage5 = new TabPage();
+            label36 = new Label();
+            label37 = new Label();
             label32 = new Label();
             lblStatusHistorico = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             btnFechar = new Button();
             btnMinimizar = new Button();
-            label36 = new Label();
-            label37 = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numIdEstoque).BeginInit();
@@ -138,11 +138,13 @@
             // 
             // tabPage1
             // 
+            tabPage1.BackColor = SystemColors.Control;
             tabPage1.Controls.Add(lstBoxEstoque);
             tabPage1.Controls.Add(btnCadastrarEstoque);
             tabPage1.Controls.Add(numIdEstoque);
             tabPage1.Controls.Add(numQuantEstoque);
             tabPage1.Controls.Add(label7);
+            tabPage1.Controls.Add(btnAtulizarEstoque);
             tabPage1.Controls.Add(label8);
             tabPage1.Controls.Add(label2);
             tabPage1.Controls.Add(btnExcluirEstoque);
@@ -150,14 +152,12 @@
             tabPage1.Controls.Add(label9);
             tabPage1.Controls.Add(txtNomeEstoque);
             tabPage1.Controls.Add(label10);
-            tabPage1.Controls.Add(btnAtulizarEstoque);
             tabPage1.Location = new Point(4, 27);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
             tabPage1.Size = new Size(907, 439);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Estoque";
-            tabPage1.UseVisualStyleBackColor = true;
             // 
             // lstBoxEstoque
             // 
@@ -179,7 +179,7 @@
             btnCadastrarEstoque.Cursor = Cursors.Hand;
             btnCadastrarEstoque.FlatAppearance.BorderSize = 0;
             btnCadastrarEstoque.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCadastrarEstoque.Location = new Point(571, 363);
+            btnCadastrarEstoque.Location = new Point(0, 363);
             btnCadastrarEstoque.Name = "btnCadastrarEstoque";
             btnCadastrarEstoque.Size = new Size(336, 70);
             btnCadastrarEstoque.TabIndex = 20;
@@ -195,9 +195,9 @@
             // 
             // numQuantEstoque
             // 
-            numQuantEstoque.Location = new Point(694, 334);
+            numQuantEstoque.Location = new Point(684, 334);
             numQuantEstoque.Name = "numQuantEstoque";
-            numQuantEstoque.Size = new Size(213, 23);
+            numQuantEstoque.Size = new Size(223, 23);
             numQuantEstoque.TabIndex = 18;
             // 
             // label7
@@ -210,11 +210,26 @@
             label7.TabIndex = 16;
             label7.Text = "Id";
             // 
+            // btnAtulizarEstoque
+            // 
+            btnAtulizarEstoque.BackColor = SystemColors.Window;
+            btnAtulizarEstoque.BackgroundImage = (Image)resources.GetObject("btnAtulizarEstoque.BackgroundImage");
+            btnAtulizarEstoque.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAtulizarEstoque.Cursor = Cursors.Hand;
+            btnAtulizarEstoque.FlatAppearance.BorderSize = 0;
+            btnAtulizarEstoque.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAtulizarEstoque.Location = new Point(342, 363);
+            btnAtulizarEstoque.Name = "btnAtulizarEstoque";
+            btnAtulizarEstoque.Size = new Size(336, 70);
+            btnAtulizarEstoque.TabIndex = 6;
+            btnAtulizarEstoque.UseVisualStyleBackColor = false;
+            btnAtulizarEstoque.Click += btnAtualizarEstoque_Click;
+            // 
             // label8
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(694, 306);
+            label8.Location = new Point(684, 306);
             label8.Name = "label8";
             label8.Size = new Size(116, 25);
             label8.TabIndex = 14;
@@ -238,7 +253,7 @@
             btnExcluirEstoque.Cursor = Cursors.Hand;
             btnExcluirEstoque.FlatAppearance.BorderSize = 0;
             btnExcluirEstoque.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExcluirEstoque.Location = new Point(342, 363);
+            btnExcluirEstoque.Location = new Point(684, 363);
             btnExcluirEstoque.Name = "btnExcluirEstoque";
             btnExcluirEstoque.Size = new Size(223, 70);
             btnExcluirEstoque.TabIndex = 7;
@@ -249,7 +264,7 @@
             // 
             txtDescEstoque.Location = new Point(397, 334);
             txtDescEstoque.Name = "txtDescEstoque";
-            txtDescEstoque.Size = new Size(291, 23);
+            txtDescEstoque.Size = new Size(281, 23);
             txtDescEstoque.TabIndex = 13;
             // 
             // label9
@@ -279,21 +294,6 @@
             label10.TabIndex = 10;
             label10.Text = "Nome Do Produto";
             // 
-            // btnAtulizarEstoque
-            // 
-            btnAtulizarEstoque.BackColor = SystemColors.Window;
-            btnAtulizarEstoque.BackgroundImage = (Image)resources.GetObject("btnAtulizarEstoque.BackgroundImage");
-            btnAtulizarEstoque.BackgroundImageLayout = ImageLayout.Zoom;
-            btnAtulizarEstoque.Cursor = Cursors.Hand;
-            btnAtulizarEstoque.FlatAppearance.BorderSize = 0;
-            btnAtulizarEstoque.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAtulizarEstoque.Location = new Point(0, 363);
-            btnAtulizarEstoque.Name = "btnAtulizarEstoque";
-            btnAtulizarEstoque.Size = new Size(336, 70);
-            btnAtulizarEstoque.TabIndex = 6;
-            btnAtulizarEstoque.UseVisualStyleBackColor = false;
-            btnAtulizarEstoque.Click += btnAtualizarEstoque_Click;
-            // 
             // tabPage2
             // 
             tabPage2.BackColor = SystemColors.Control;
@@ -302,10 +302,10 @@
             tabPage2.Controls.Add(txtNomeCliente);
             tabPage2.Controls.Add(numIdCliente);
             tabPage2.Controls.Add(lstBoxCliente);
+            tabPage2.Controls.Add(btnAtualizarCliente);
             tabPage2.Controls.Add(label12);
             tabPage2.Controls.Add(btnAdicionarCliente);
             tabPage2.Controls.Add(btnExcluirCliente);
-            tabPage2.Controls.Add(btnAtualizarCliente);
             tabPage2.Controls.Add(label6);
             tabPage2.Controls.Add(txtEmailCliente);
             tabPage2.Controls.Add(label5);
@@ -362,6 +362,21 @@
             lstBoxCliente.Size = new Size(907, 242);
             lstBoxCliente.TabIndex = 22;
             // 
+            // btnAtualizarCliente
+            // 
+            btnAtualizarCliente.BackColor = SystemColors.Window;
+            btnAtualizarCliente.BackgroundImage = (Image)resources.GetObject("btnAtualizarCliente.BackgroundImage");
+            btnAtualizarCliente.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAtualizarCliente.Cursor = Cursors.Hand;
+            btnAtualizarCliente.FlatAppearance.BorderSize = 0;
+            btnAtualizarCliente.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAtualizarCliente.Location = new Point(342, 363);
+            btnAtualizarCliente.Name = "btnAtualizarCliente";
+            btnAtualizarCliente.Size = new Size(336, 70);
+            btnAtualizarCliente.TabIndex = 12;
+            btnAtualizarCliente.UseVisualStyleBackColor = false;
+            btnAtualizarCliente.Click += btnAtualizarCliente_Click;
+            // 
             // label12
             // 
             label12.AutoSize = true;
@@ -380,7 +395,7 @@
             btnAdicionarCliente.Cursor = Cursors.Hand;
             btnAdicionarCliente.FlatAppearance.BorderSize = 0;
             btnAdicionarCliente.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAdicionarCliente.Location = new Point(571, 363);
+            btnAdicionarCliente.Location = new Point(0, 363);
             btnAdicionarCliente.Name = "btnAdicionarCliente";
             btnAdicionarCliente.Size = new Size(336, 70);
             btnAdicionarCliente.TabIndex = 15;
@@ -395,27 +410,12 @@
             btnExcluirCliente.Cursor = Cursors.Hand;
             btnExcluirCliente.FlatAppearance.BorderSize = 0;
             btnExcluirCliente.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExcluirCliente.Location = new Point(342, 363);
+            btnExcluirCliente.Location = new Point(684, 363);
             btnExcluirCliente.Name = "btnExcluirCliente";
             btnExcluirCliente.Size = new Size(223, 70);
             btnExcluirCliente.TabIndex = 13;
             btnExcluirCliente.UseVisualStyleBackColor = false;
             btnExcluirCliente.Click += btnExcluirCliente_Click;
-            // 
-            // btnAtualizarCliente
-            // 
-            btnAtualizarCliente.BackColor = SystemColors.Window;
-            btnAtualizarCliente.BackgroundImage = (Image)resources.GetObject("btnAtualizarCliente.BackgroundImage");
-            btnAtualizarCliente.BackgroundImageLayout = ImageLayout.Zoom;
-            btnAtualizarCliente.Cursor = Cursors.Hand;
-            btnAtualizarCliente.FlatAppearance.BorderSize = 0;
-            btnAtualizarCliente.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAtualizarCliente.Location = new Point(0, 363);
-            btnAtualizarCliente.Name = "btnAtualizarCliente";
-            btnAtualizarCliente.Size = new Size(336, 70);
-            btnAtualizarCliente.TabIndex = 12;
-            btnAtualizarCliente.UseVisualStyleBackColor = false;
-            btnAtualizarCliente.Click += btnAtualizarCliente_Click;
             // 
             // label6
             // 
@@ -479,13 +479,13 @@
             tabPage3.Controls.Add(lstBoxEntrada);
             tabPage3.Controls.Add(txtObsEntrada);
             tabPage3.Controls.Add(label19);
+            tabPage3.Controls.Add(btnAtualizarEntrada);
             tabPage3.Controls.Add(label16);
             tabPage3.Controls.Add(label14);
             tabPage3.Controls.Add(label13);
             tabPage3.Controls.Add(numIdEntrada);
             tabPage3.Controls.Add(btnAdicionarentrada);
             tabPage3.Controls.Add(btnExcluirEntrada);
-            tabPage3.Controls.Add(btnAtualizarEntrada);
             tabPage3.Controls.Add(label15);
             tabPage3.Controls.Add(txtTipoEntrada);
             tabPage3.Controls.Add(label17);
@@ -541,6 +541,21 @@
             label19.TabIndex = 40;
             label19.Text = "Obs:";
             // 
+            // btnAtualizarEntrada
+            // 
+            btnAtualizarEntrada.BackColor = SystemColors.Window;
+            btnAtualizarEntrada.BackgroundImage = (Image)resources.GetObject("btnAtualizarEntrada.BackgroundImage");
+            btnAtualizarEntrada.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAtualizarEntrada.Cursor = Cursors.Hand;
+            btnAtualizarEntrada.FlatAppearance.BorderSize = 0;
+            btnAtualizarEntrada.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAtualizarEntrada.Location = new Point(342, 363);
+            btnAtualizarEntrada.Name = "btnAtualizarEntrada";
+            btnAtualizarEntrada.Size = new Size(336, 70);
+            btnAtualizarEntrada.TabIndex = 28;
+            btnAtualizarEntrada.UseVisualStyleBackColor = false;
+            btnAtualizarEntrada.Click += btnAtualizarServico_Click;
+            // 
             // label16
             // 
             label16.AutoSize = true;
@@ -586,7 +601,7 @@
             btnAdicionarentrada.Cursor = Cursors.Hand;
             btnAdicionarentrada.FlatAppearance.BorderSize = 0;
             btnAdicionarentrada.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAdicionarentrada.Location = new Point(571, 363);
+            btnAdicionarentrada.Location = new Point(0, 363);
             btnAdicionarentrada.Name = "btnAdicionarentrada";
             btnAdicionarentrada.Size = new Size(336, 70);
             btnAdicionarentrada.TabIndex = 31;
@@ -601,27 +616,12 @@
             btnExcluirEntrada.Cursor = Cursors.Hand;
             btnExcluirEntrada.FlatAppearance.BorderSize = 0;
             btnExcluirEntrada.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExcluirEntrada.Location = new Point(342, 363);
+            btnExcluirEntrada.Location = new Point(684, 363);
             btnExcluirEntrada.Name = "btnExcluirEntrada";
             btnExcluirEntrada.Size = new Size(223, 70);
             btnExcluirEntrada.TabIndex = 29;
             btnExcluirEntrada.UseVisualStyleBackColor = false;
             btnExcluirEntrada.Click += btnExcluirServico_Click;
-            // 
-            // btnAtualizarEntrada
-            // 
-            btnAtualizarEntrada.BackColor = SystemColors.Window;
-            btnAtualizarEntrada.BackgroundImage = (Image)resources.GetObject("btnAtualizarEntrada.BackgroundImage");
-            btnAtualizarEntrada.BackgroundImageLayout = ImageLayout.Zoom;
-            btnAtualizarEntrada.Cursor = Cursors.Hand;
-            btnAtualizarEntrada.FlatAppearance.BorderSize = 0;
-            btnAtualizarEntrada.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAtualizarEntrada.Location = new Point(0, 363);
-            btnAtualizarEntrada.Name = "btnAtualizarEntrada";
-            btnAtualizarEntrada.Size = new Size(336, 70);
-            btnAtualizarEntrada.TabIndex = 28;
-            btnAtualizarEntrada.UseVisualStyleBackColor = false;
-            btnAtualizarEntrada.Click += btnAtualizarServico_Click;
             // 
             // label15
             // 
@@ -674,11 +674,11 @@
             tabPage4.Controls.Add(lstBoxSaida);
             tabPage4.Controls.Add(txtObsSaida);
             tabPage4.Controls.Add(label20);
+            tabPage4.Controls.Add(btnAdicinarSaida);
             tabPage4.Controls.Add(label21);
             tabPage4.Controls.Add(label22);
             tabPage4.Controls.Add(label23);
             tabPage4.Controls.Add(numIdSaida);
-            tabPage4.Controls.Add(btnAdicinarSaida);
             tabPage4.Controls.Add(btnExcluirSaida);
             tabPage4.Controls.Add(btnAtualizarSaida);
             tabPage4.Controls.Add(label24);
@@ -737,6 +737,21 @@
             label20.TabIndex = 58;
             label20.Text = "Obs:";
             // 
+            // btnAdicinarSaida
+            // 
+            btnAdicinarSaida.BackColor = SystemColors.Window;
+            btnAdicinarSaida.BackgroundImage = (Image)resources.GetObject("btnAdicinarSaida.BackgroundImage");
+            btnAdicinarSaida.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAdicinarSaida.Cursor = Cursors.Hand;
+            btnAdicinarSaida.FlatAppearance.BorderSize = 0;
+            btnAdicinarSaida.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAdicinarSaida.Location = new Point(0, 363);
+            btnAdicinarSaida.Name = "btnAdicinarSaida";
+            btnAdicinarSaida.Size = new Size(336, 70);
+            btnAdicinarSaida.TabIndex = 51;
+            btnAdicinarSaida.UseVisualStyleBackColor = false;
+            btnAdicinarSaida.Click += btnAdicionarSaida_Click;
+            // 
             // label21
             // 
             label21.AutoSize = true;
@@ -774,21 +789,6 @@
             numIdSaida.Size = new Size(87, 23);
             numIdSaida.TabIndex = 52;
             // 
-            // btnAdicinarSaida
-            // 
-            btnAdicinarSaida.BackColor = SystemColors.Window;
-            btnAdicinarSaida.BackgroundImage = (Image)resources.GetObject("btnAdicinarSaida.BackgroundImage");
-            btnAdicinarSaida.BackgroundImageLayout = ImageLayout.Zoom;
-            btnAdicinarSaida.Cursor = Cursors.Hand;
-            btnAdicinarSaida.FlatAppearance.BorderSize = 0;
-            btnAdicinarSaida.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAdicinarSaida.Location = new Point(571, 363);
-            btnAdicinarSaida.Name = "btnAdicinarSaida";
-            btnAdicinarSaida.Size = new Size(336, 70);
-            btnAdicinarSaida.TabIndex = 51;
-            btnAdicinarSaida.UseVisualStyleBackColor = false;
-            btnAdicinarSaida.Click += btnAdicionarSaida_Click;
-            // 
             // btnExcluirSaida
             // 
             btnExcluirSaida.BackColor = SystemColors.Window;
@@ -797,7 +797,7 @@
             btnExcluirSaida.Cursor = Cursors.Hand;
             btnExcluirSaida.FlatAppearance.BorderSize = 0;
             btnExcluirSaida.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExcluirSaida.Location = new Point(342, 363);
+            btnExcluirSaida.Location = new Point(684, 363);
             btnExcluirSaida.Name = "btnExcluirSaida";
             btnExcluirSaida.Size = new Size(223, 70);
             btnExcluirSaida.TabIndex = 49;
@@ -812,7 +812,7 @@
             btnAtualizarSaida.Cursor = Cursors.Hand;
             btnAtualizarSaida.FlatAppearance.BorderSize = 0;
             btnAtualizarSaida.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAtualizarSaida.Location = new Point(0, 363);
+            btnAtualizarSaida.Location = new Point(342, 363);
             btnAtualizarSaida.Name = "btnAtualizarSaida";
             btnAtualizarSaida.Size = new Size(336, 70);
             btnAtualizarSaida.TabIndex = 48;
@@ -866,6 +866,8 @@
             // tabPage5
             // 
             tabPage5.BackColor = SystemColors.Window;
+            tabPage5.Controls.Add(label36);
+            tabPage5.Controls.Add(label37);
             tabPage5.Controls.Add(label32);
             tabPage5.Controls.Add(lblStatusHistorico);
             tabPage5.Location = new Point(4, 27);
@@ -874,6 +876,24 @@
             tabPage5.Size = new Size(907, 439);
             tabPage5.TabIndex = 4;
             tabPage5.Text = "Histórico";
+            // 
+            // label36
+            // 
+            label36.AutoSize = true;
+            label36.Location = new Point(879, 421);
+            label36.Name = "label36";
+            label36.Size = new Size(22, 15);
+            label36.TabIndex = 5;
+            label36.Text = "1.0";
+            // 
+            // label37
+            // 
+            label37.AutoSize = true;
+            label37.Location = new Point(6, 421);
+            label37.Name = "label37";
+            label37.Size = new Size(156, 15);
+            label37.TabIndex = 6;
+            label37.Text = "Developed by Allan Pinheiro";
             // 
             // label32
             // 
@@ -950,24 +970,6 @@
             btnMinimizar.UseVisualStyleBackColor = false;
             btnMinimizar.Click += btnMinimizar_Click;
             // 
-            // label36
-            // 
-            label36.AutoSize = true;
-            label36.Location = new Point(969, 615);
-            label36.Name = "label36";
-            label36.Size = new Size(22, 15);
-            label36.TabIndex = 5;
-            label36.Text = "1.0";
-            // 
-            // label37
-            // 
-            label37.AutoSize = true;
-            label37.Location = new Point(12, 615);
-            label37.Name = "label37";
-            label37.Size = new Size(156, 15);
-            label37.TabIndex = 6;
-            label37.Text = "Developed by Allan Pinheiro";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -975,8 +977,6 @@
             BackColor = SystemColors.Control;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1003, 639);
-            Controls.Add(label37);
-            Controls.Add(label36);
             Controls.Add(btnMinimizar);
             Controls.Add(btnFechar);
             Controls.Add(pictureBox1);
