@@ -1087,8 +1087,6 @@
             // tabPage5
             // 
             tabPage5.BackColor = SystemColors.Window;
-            tabPage5.Controls.Add(label36);
-            tabPage5.Controls.Add(label37);
             tabPage5.Controls.Add(label32);
             tabPage5.Controls.Add(lblStatusHistorico);
             tabPage5.Location = new Point(4, 27);
@@ -1101,7 +1099,7 @@
             // label36
             // 
             label36.AutoSize = true;
-            label36.Location = new Point(879, 421);
+            label36.Location = new Point(969, 615);
             label36.Name = "label36";
             label36.Size = new Size(22, 15);
             label36.TabIndex = 5;
@@ -1110,7 +1108,7 @@
             // label37
             // 
             label37.AutoSize = true;
-            label37.Location = new Point(6, 421);
+            label37.Location = new Point(12, 615);
             label37.Name = "label37";
             label37.Size = new Size(156, 15);
             label37.TabIndex = 6;
@@ -1198,7 +1196,9 @@
             BackColor = SystemColors.Control;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1003, 639);
+            Controls.Add(label36);
             Controls.Add(btnMinimizar);
+            Controls.Add(label37);
             Controls.Add(btnFechar);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
