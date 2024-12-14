@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            label30 = new Label();
+            label29 = new Label();
+            label28 = new Label();
+            label27 = new Label();
             lstBoxEstoque = new ListBox();
             btnCadastrarEstoque = new Button();
             numIdEstoque = new NumericUpDown();
@@ -45,6 +49,9 @@
             txtNomeEstoque = new TextBox();
             label10 = new Label();
             tabPage2 = new TabPage();
+            label34 = new Label();
+            label33 = new Label();
+            label31 = new Label();
             txtCpfCliente = new TextBox();
             label11 = new Label();
             txtNomeCliente = new TextBox();
@@ -61,6 +68,11 @@
             label4 = new Label();
             label3 = new Label();
             tabPage3 = new TabPage();
+            label41 = new Label();
+            label40 = new Label();
+            label39 = new Label();
+            label38 = new Label();
+            label35 = new Label();
             txtDataSaidaEntrada = new TextBox();
             txtDataEntradaEntrada = new TextBox();
             lstBoxEntrada = new ListBox();
@@ -79,6 +91,11 @@
             txtNomeEntrada = new TextBox();
             label18 = new Label();
             tabPage4 = new TabPage();
+            label46 = new Label();
+            label45 = new Label();
+            label44 = new Label();
+            label43 = new Label();
+            label42 = new Label();
             txtDataSaidaSaida = new TextBox();
             txtDataEntradaSaida = new TextBox();
             lstBoxSaida = new ListBox();
@@ -139,6 +156,10 @@
             // tabPage1
             // 
             tabPage1.BackColor = SystemColors.Control;
+            tabPage1.Controls.Add(label30);
+            tabPage1.Controls.Add(label29);
+            tabPage1.Controls.Add(label28);
+            tabPage1.Controls.Add(label27);
             tabPage1.Controls.Add(lstBoxEstoque);
             tabPage1.Controls.Add(btnCadastrarEstoque);
             tabPage1.Controls.Add(numIdEstoque);
@@ -158,6 +179,50 @@
             tabPage1.Size = new Size(907, 439);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Estoque";
+            // 
+            // label30
+            // 
+            label30.AutoSize = true;
+            label30.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label30.ForeColor = Color.FromArgb(255, 128, 128);
+            label30.Location = new Point(795, 306);
+            label30.Name = "label30";
+            label30.Size = new Size(21, 25);
+            label30.TabIndex = 6;
+            label30.Text = "*";
+            // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label29.ForeColor = Color.FromArgb(255, 128, 128);
+            label29.Location = new Point(489, 306);
+            label29.Name = "label29";
+            label29.Size = new Size(21, 25);
+            label29.TabIndex = 6;
+            label29.Text = "*";
+            // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label28.ForeColor = Color.FromArgb(255, 128, 128);
+            label28.Location = new Point(269, 306);
+            label28.Name = "label28";
+            label28.Size = new Size(21, 25);
+            label28.TabIndex = 6;
+            label28.Text = "*";
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label27.ForeColor = Color.FromArgb(255, 128, 128);
+            label27.Location = new Point(25, 306);
+            label27.Name = "label27";
+            label27.Size = new Size(21, 25);
+            label27.TabIndex = 5;
+            label27.Text = "*";
             // 
             // lstBoxEstoque
             // 
@@ -206,9 +271,9 @@
             label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.Location = new Point(0, 306);
             label7.Name = "label7";
-            label7.Size = new Size(30, 25);
+            label7.Size = new Size(35, 25);
             label7.TabIndex = 16;
-            label7.Text = "Id";
+            label7.Text = "Id ";
             // 
             // btnAtulizarEstoque
             // 
@@ -297,6 +362,9 @@
             // tabPage2
             // 
             tabPage2.BackColor = SystemColors.Control;
+            tabPage2.Controls.Add(label34);
+            tabPage2.Controls.Add(label33);
+            tabPage2.Controls.Add(label31);
             tabPage2.Controls.Add(txtCpfCliente);
             tabPage2.Controls.Add(label11);
             tabPage2.Controls.Add(txtNomeCliente);
@@ -319,6 +387,39 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Clientes";
             // 
+            // label34
+            // 
+            label34.AutoSize = true;
+            label34.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label34.ForeColor = Color.FromArgb(255, 128, 128);
+            label34.Location = new Point(480, 306);
+            label34.Name = "label34";
+            label34.Size = new Size(21, 25);
+            label34.TabIndex = 6;
+            label34.Text = "*";
+            // 
+            // label33
+            // 
+            label33.AutoSize = true;
+            label33.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label33.ForeColor = Color.FromArgb(255, 128, 128);
+            label33.Location = new Point(255, 306);
+            label33.Name = "label33";
+            label33.Size = new Size(21, 25);
+            label33.TabIndex = 6;
+            label33.Text = "*";
+            // 
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label31.ForeColor = Color.FromArgb(255, 128, 128);
+            label31.Location = new Point(25, 306);
+            label31.Name = "label31";
+            label31.Size = new Size(21, 25);
+            label31.TabIndex = 6;
+            label31.Text = "*";
+            // 
             // txtCpfCliente
             // 
             txtCpfCliente.Location = new Point(739, 333);
@@ -340,7 +441,7 @@
             // 
             txtNomeCliente.Location = new Point(97, 334);
             txtNomeCliente.Name = "txtNomeCliente";
-            txtNomeCliente.Size = new Size(300, 23);
+            txtNomeCliente.Size = new Size(294, 23);
             txtNomeCliente.TabIndex = 24;
             // 
             // numIdCliente
@@ -446,16 +547,16 @@
             // 
             // txtTelefoneCliente
             // 
-            txtTelefoneCliente.Location = new Point(403, 334);
+            txtTelefoneCliente.Location = new Point(397, 334);
             txtTelefoneCliente.Name = "txtTelefoneCliente";
-            txtTelefoneCliente.Size = new Size(162, 23);
+            txtTelefoneCliente.Size = new Size(168, 23);
             txtTelefoneCliente.TabIndex = 4;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(403, 306);
+            label4.Location = new Point(397, 306);
             label4.Name = "label4";
             label4.Size = new Size(87, 25);
             label4.TabIndex = 3;
@@ -467,13 +568,18 @@
             label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(97, 306);
             label3.Name = "label3";
-            label3.Size = new Size(66, 25);
+            label3.Size = new Size(163, 25);
             label3.TabIndex = 1;
-            label3.Text = "Nome";
+            label3.Text = "Nome Do Cliente";
             // 
             // tabPage3
             // 
             tabPage3.BackColor = SystemColors.Control;
+            tabPage3.Controls.Add(label41);
+            tabPage3.Controls.Add(label40);
+            tabPage3.Controls.Add(label39);
+            tabPage3.Controls.Add(label38);
+            tabPage3.Controls.Add(label35);
             tabPage3.Controls.Add(txtDataSaidaEntrada);
             tabPage3.Controls.Add(txtDataEntradaEntrada);
             tabPage3.Controls.Add(lstBoxEntrada);
@@ -498,18 +604,73 @@
             tabPage3.TabIndex = 2;
             tabPage3.Text = "Entrada";
             // 
+            // label41
+            // 
+            label41.AutoSize = true;
+            label41.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label41.ForeColor = Color.FromArgb(255, 128, 128);
+            label41.Location = new Point(342, 331);
+            label41.Name = "label41";
+            label41.Size = new Size(21, 25);
+            label41.TabIndex = 7;
+            label41.Text = "*";
+            // 
+            // label40
+            // 
+            label40.AutoSize = true;
+            label40.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label40.ForeColor = Color.FromArgb(255, 128, 128);
+            label40.Location = new Point(122, 334);
+            label40.Name = "label40";
+            label40.Size = new Size(21, 25);
+            label40.TabIndex = 7;
+            label40.Text = "*";
+            // 
+            // label39
+            // 
+            label39.AutoSize = true;
+            label39.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label39.ForeColor = Color.FromArgb(255, 128, 128);
+            label39.Location = new Point(676, 296);
+            label39.Name = "label39";
+            label39.Size = new Size(21, 25);
+            label39.TabIndex = 7;
+            label39.Text = "*";
+            // 
+            // label38
+            // 
+            label38.AutoSize = true;
+            label38.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label38.ForeColor = Color.FromArgb(255, 128, 128);
+            label38.Location = new Point(24, 296);
+            label38.Name = "label38";
+            label38.Size = new Size(21, 25);
+            label38.TabIndex = 7;
+            label38.Text = "*";
+            // 
+            // label35
+            // 
+            label35.AutoSize = true;
+            label35.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label35.ForeColor = Color.FromArgb(255, 128, 128);
+            label35.Location = new Point(261, 296);
+            label35.Name = "label35";
+            label35.Size = new Size(21, 25);
+            label35.TabIndex = 7;
+            label35.Text = "*";
+            // 
             // txtDataSaidaEntrada
             // 
-            txtDataSaidaEntrada.Location = new Point(353, 334);
+            txtDataSaidaEntrada.Location = new Point(369, 334);
             txtDataSaidaEntrada.Name = "txtDataSaidaEntrada";
-            txtDataSaidaEntrada.Size = new Size(96, 23);
+            txtDataSaidaEntrada.Size = new Size(86, 23);
             txtDataSaidaEntrada.TabIndex = 63;
             // 
             // txtDataEntradaEntrada
             // 
-            txtDataEntradaEntrada.Location = new Point(133, 336);
+            txtDataEntradaEntrada.Location = new Point(149, 336);
             txtDataEntradaEntrada.Name = "txtDataEntradaEntrada";
-            txtDataEntradaEntrada.Size = new Size(102, 23);
+            txtDataEntradaEntrada.Size = new Size(86, 23);
             txtDataEntradaEntrada.TabIndex = 62;
             // 
             // lstBoxEntrada
@@ -526,16 +687,16 @@
             // 
             // txtObsEntrada
             // 
-            txtObsEntrada.Location = new Point(512, 334);
+            txtObsEntrada.Location = new Point(524, 334);
             txtObsEntrada.Name = "txtObsEntrada";
-            txtObsEntrada.Size = new Size(395, 23);
+            txtObsEntrada.Size = new Size(383, 23);
             txtObsEntrada.TabIndex = 41;
             // 
             // label19
             // 
             label19.AutoSize = true;
             label19.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label19.Location = new Point(455, 332);
+            label19.Location = new Point(467, 332);
             label19.Name = "label19";
             label19.Size = new Size(51, 25);
             label19.TabIndex = 40;
@@ -588,9 +749,9 @@
             // 
             // numIdEntrada
             // 
-            numIdEntrada.Location = new Point(36, 298);
+            numIdEntrada.Location = new Point(51, 298);
             numIdEntrada.Name = "numIdEntrada";
-            numIdEntrada.Size = new Size(87, 23);
+            numIdEntrada.Size = new Size(72, 23);
             numIdEntrada.TabIndex = 32;
             // 
             // btnAdicionarentrada
@@ -635,9 +796,9 @@
             // 
             // txtTipoEntrada
             // 
-            txtTipoEntrada.Location = new Point(687, 299);
+            txtTipoEntrada.Location = new Point(703, 299);
             txtTipoEntrada.Name = "txtTipoEntrada";
-            txtTipoEntrada.Size = new Size(220, 23);
+            txtTipoEntrada.Size = new Size(204, 23);
             txtTipoEntrada.TabIndex = 23;
             // 
             // label17
@@ -652,9 +813,9 @@
             // 
             // txtNomeEntrada
             // 
-            txtNomeEntrada.Location = new Point(272, 298);
+            txtNomeEntrada.Location = new Point(288, 298);
             txtNomeEntrada.Name = "txtNomeEntrada";
-            txtNomeEntrada.Size = new Size(246, 23);
+            txtNomeEntrada.Size = new Size(230, 23);
             txtNomeEntrada.TabIndex = 21;
             // 
             // label18
@@ -669,6 +830,11 @@
             // 
             // tabPage4
             // 
+            tabPage4.Controls.Add(label46);
+            tabPage4.Controls.Add(label45);
+            tabPage4.Controls.Add(label44);
+            tabPage4.Controls.Add(label43);
+            tabPage4.Controls.Add(label42);
             tabPage4.Controls.Add(txtDataSaidaSaida);
             tabPage4.Controls.Add(txtDataEntradaSaida);
             tabPage4.Controls.Add(lstBoxSaida);
@@ -694,18 +860,73 @@
             tabPage4.Text = "Saida";
             tabPage4.UseVisualStyleBackColor = true;
             // 
+            // label46
+            // 
+            label46.AutoSize = true;
+            label46.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label46.ForeColor = Color.FromArgb(255, 128, 128);
+            label46.Location = new Point(342, 331);
+            label46.Name = "label46";
+            label46.Size = new Size(21, 25);
+            label46.TabIndex = 7;
+            label46.Text = "*";
+            // 
+            // label45
+            // 
+            label45.AutoSize = true;
+            label45.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label45.ForeColor = Color.FromArgb(255, 128, 128);
+            label45.Location = new Point(122, 334);
+            label45.Name = "label45";
+            label45.Size = new Size(21, 25);
+            label45.TabIndex = 7;
+            label45.Text = "*";
+            // 
+            // label44
+            // 
+            label44.AutoSize = true;
+            label44.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label44.ForeColor = Color.FromArgb(255, 128, 128);
+            label44.Location = new Point(676, 296);
+            label44.Name = "label44";
+            label44.Size = new Size(21, 25);
+            label44.TabIndex = 7;
+            label44.Text = "*";
+            // 
+            // label43
+            // 
+            label43.AutoSize = true;
+            label43.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label43.ForeColor = Color.FromArgb(255, 128, 128);
+            label43.Location = new Point(261, 296);
+            label43.Name = "label43";
+            label43.Size = new Size(21, 25);
+            label43.TabIndex = 7;
+            label43.Text = "*";
+            // 
+            // label42
+            // 
+            label42.AutoSize = true;
+            label42.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label42.ForeColor = Color.FromArgb(255, 128, 128);
+            label42.Location = new Point(24, 296);
+            label42.Name = "label42";
+            label42.Size = new Size(21, 25);
+            label42.TabIndex = 7;
+            label42.Text = "*";
+            // 
             // txtDataSaidaSaida
             // 
-            txtDataSaidaSaida.Location = new Point(353, 334);
+            txtDataSaidaSaida.Location = new Point(369, 334);
             txtDataSaidaSaida.Name = "txtDataSaidaSaida";
-            txtDataSaidaSaida.Size = new Size(96, 23);
+            txtDataSaidaSaida.Size = new Size(86, 23);
             txtDataSaidaSaida.TabIndex = 62;
             // 
             // txtDataEntradaSaida
             // 
-            txtDataEntradaSaida.Location = new Point(133, 336);
+            txtDataEntradaSaida.Location = new Point(149, 336);
             txtDataEntradaSaida.Name = "txtDataEntradaSaida";
-            txtDataEntradaSaida.Size = new Size(102, 23);
+            txtDataEntradaSaida.Size = new Size(86, 23);
             txtDataEntradaSaida.TabIndex = 61;
             // 
             // lstBoxSaida
@@ -722,16 +943,16 @@
             // 
             // txtObsSaida
             // 
-            txtObsSaida.Location = new Point(512, 334);
+            txtObsSaida.Location = new Point(524, 334);
             txtObsSaida.Name = "txtObsSaida";
-            txtObsSaida.Size = new Size(395, 23);
+            txtObsSaida.Size = new Size(383, 23);
             txtObsSaida.TabIndex = 59;
             // 
             // label20
             // 
             label20.AutoSize = true;
             label20.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label20.Location = new Point(455, 332);
+            label20.Location = new Point(467, 332);
             label20.Name = "label20";
             label20.Size = new Size(51, 25);
             label20.TabIndex = 58;
@@ -784,9 +1005,9 @@
             // 
             // numIdSaida
             // 
-            numIdSaida.Location = new Point(36, 298);
+            numIdSaida.Location = new Point(51, 298);
             numIdSaida.Name = "numIdSaida";
-            numIdSaida.Size = new Size(87, 23);
+            numIdSaida.Size = new Size(72, 23);
             numIdSaida.TabIndex = 52;
             // 
             // btnExcluirSaida
@@ -831,9 +1052,9 @@
             // 
             // txtTipoSaida
             // 
-            txtTipoSaida.Location = new Point(687, 299);
+            txtTipoSaida.Location = new Point(703, 299);
             txtTipoSaida.Name = "txtTipoSaida";
-            txtTipoSaida.Size = new Size(220, 23);
+            txtTipoSaida.Size = new Size(204, 23);
             txtTipoSaida.TabIndex = 46;
             // 
             // label25
@@ -848,9 +1069,9 @@
             // 
             // txtNomeSaida
             // 
-            txtNomeSaida.Location = new Point(272, 298);
+            txtNomeSaida.Location = new Point(288, 298);
             txtNomeSaida.Name = "txtNomeSaida";
-            txtNomeSaida.Size = new Size(246, 23);
+            txtNomeSaida.Size = new Size(230, 23);
             txtNomeSaida.TabIndex = 44;
             // 
             // label26
@@ -1086,5 +1307,22 @@
         private TextBox txtDataEntradaSaida;
         private TextBox txtDataSaidaEntrada;
         private TextBox txtDataEntradaEntrada;
+        private Label label27;
+        private Label label30;
+        private Label label29;
+        private Label label28;
+        private Label label34;
+        private Label label33;
+        private Label label31;
+        private Label label41;
+        private Label label40;
+        private Label label39;
+        private Label label38;
+        private Label label35;
+        private Label label46;
+        private Label label45;
+        private Label label44;
+        private Label label43;
+        private Label label42;
     }
 }
