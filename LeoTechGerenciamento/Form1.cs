@@ -77,6 +77,23 @@ namespace LeoTechGerenciamento
                 LimparCamposEstoque();
             }
         }
+
+        // Evento para quando o usuário seleciona um item no ListBox
+        private void listBoxEstoque_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstBoxEstoque.SelectedItem != null)
+            {
+                // Obtém o item selecionado no ListBox (presume que seja do tipo Produto)
+                var produtoSelecionado = (Produto)lstBoxEstoque.SelectedItem;
+
+                // Preenche os campos com os dados do produto selecionado
+                numIdEstoque.Value = produtoSelecionado.Id;
+                txtNomeEstoque.Text = produtoSelecionado.NomeDoProduto;
+                txtDescEstoque.Text = produtoSelecionado.Descricao;
+                numQuantEstoque.Value = produtoSelecionado.Quantidade;
+            }
+        }
+
         // Btn Excluir Estoque
         private void btnExcluirEstoque_Click(object sender, EventArgs e)
         {
@@ -161,6 +178,22 @@ namespace LeoTechGerenciamento
                 LimparCamposClientes();
             }
         }
+
+        // Evento para quando o usuário seleciona um item no ListBox
+        private void listBoxcliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstBoxCliente.SelectedItem != null)
+            {
+                var clienteSelecionado = (Cliente)lstBoxCliente.SelectedItem;
+
+                numIdCliente.Value = clienteSelecionado.Id;
+                txtNomeCliente.Text = clienteSelecionado.Nome;
+                txtTelefoneCliente.Text = clienteSelecionado.Telefone;
+                txtEmailCliente.Text = clienteSelecionado.Email;
+                txtCpfCliente.Text = clienteSelecionado.Cpf;
+            }
+        }
+
         // Btn Atualizar Cliente
         private void btnAtualizarCliente_Click(object sender, EventArgs e)
         {
@@ -254,6 +287,22 @@ namespace LeoTechGerenciamento
             else
             {
                 MessageBox.Show("Já existe um serviço com este ID.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        // Evento para quando o usuário seleciona um item no ListBox
+        private void listBoxEntrada_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstBoxEntrada.SelectedItem != null)
+            {
+                var entradaSelecionado = (Servico)lstBoxEntrada.SelectedItem;
+
+                numIdEntrada.Value = entradaSelecionado.Id;
+                txtNomeEntrada.Text = entradaSelecionado.NomeCliente;
+                txtTipoEntrada.Text = entradaSelecionado.TipoServico;
+                txtDataEntradaEntrada.Text = entradaSelecionado.DataEntrada;
+                txtDataSaidaEntrada.Text = entradaSelecionado.DataSaida;
+                txtObsEntrada.Text = entradaSelecionado.Obs;
             }
         }
         // Btn Atualizar Entrada
@@ -351,6 +400,25 @@ namespace LeoTechGerenciamento
             }
         }
 
+        // Evento para quando o usuário seleciona um item no ListBox
+        private void listBoxSaida_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstBoxSaida.SelectedItem != null)
+            {
+                // Obtém o item selecionado no ListBox (presume que seja do tipo Produto)
+                var saidaSelecionados = (SaidaServico)lstBoxSaida.SelectedItem;
+
+                // Preenche os campos com os dados do produto selecionado
+                numIdSaida.Value = saidaSelecionados.Id;
+                txtNomeSaida.Text = saidaSelecionados.NomeCliente;
+                txtTipoSaida.Text = saidaSelecionados.TipoServico;
+                txtDataEntradaSaida.Text = saidaSelecionados.DataEntrada;
+                txtDataSaidaSaida.Text = saidaSelecionados.DataSaida;
+                txtObsSaida.Text = saidaSelecionados.Obs;
+            }
+        }
+
+
         private void btnAtualizarSaida_Click(object sender, EventArgs e)
         {
             if (!CamposPreenchidosSaida())
@@ -427,41 +495,16 @@ namespace LeoTechGerenciamento
         // --------------------------------------------------------------------------------------
         private bool CamposPreenchidosEstoque()
         {
-            if (string.IsNullOrWhiteSpace(txtNomeEstoque.Text))
-            {
-                MessageBox.Show("O campo 'Nome do Produto' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (string.IsNullOrWhiteSpace(txtDescEstoque.Text))
-            {
-                MessageBox.Show("O campo 'Descrição' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
             if (numIdEstoque.Value == 0)
             {
                 MessageBox.Show("O campo 'ID' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (numQuantEstoque.Value == 0)
-            {
-                MessageBox.Show("O campo 'Quantidade' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-           return true;
+            return true;
         }
 
         private bool CamposPreenchidosCliente()
         {
-            if (string.IsNullOrWhiteSpace(txtNomeCliente.Text))
-            {
-                MessageBox.Show("O campo 'Nome do Cliente' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (string.IsNullOrWhiteSpace(txtTelefoneCliente.Text))
-            {
-                MessageBox.Show("O campo 'Telefone' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
             if (numIdCliente.Value == 0)
             {
                 MessageBox.Show("O campo 'ID' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -472,26 +515,6 @@ namespace LeoTechGerenciamento
 
         private bool CamposPreenchidosServico()
         {
-            if (string.IsNullOrWhiteSpace(txtNomeEntrada.Text))
-            {
-                MessageBox.Show("O campo 'Nome do Cliente' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (string.IsNullOrWhiteSpace(txtTipoEntrada.Text))
-            {
-                MessageBox.Show("O campo 'Tipo de Serviço' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (string.IsNullOrWhiteSpace(txtDataEntradaEntrada.Text))
-            {
-                MessageBox.Show("O campo 'Data de Entrada' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (string.IsNullOrWhiteSpace(txtDataSaidaEntrada.Text))
-            {
-                MessageBox.Show("O campo 'Data de Saída' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
             if (numIdEntrada.Value == 0)
             {
                 MessageBox.Show("O campo 'ID' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -502,26 +525,6 @@ namespace LeoTechGerenciamento
 
         private bool CamposPreenchidosSaida()
         {
-            if (string.IsNullOrWhiteSpace(txtNomeSaida.Text))
-            {
-                MessageBox.Show("O campo 'Nome do Cliente' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (string.IsNullOrWhiteSpace(txtTipoSaida.Text))
-            {
-                MessageBox.Show("O campo 'Tipo de Serviço' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (string.IsNullOrWhiteSpace(txtDataEntradaSaida.Text))
-            {
-                MessageBox.Show("O campo 'Data de Entrada' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            if (string.IsNullOrWhiteSpace(txtDataSaidaSaida.Text))
-            {
-                MessageBox.Show("O campo 'Data de Saída' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
             if (numIdSaida.Value == 0)
             {
                 MessageBox.Show("O campo 'ID' é obrigatório.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
